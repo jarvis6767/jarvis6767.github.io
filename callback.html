@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+  <html>
+  <head><title>TikTok Auth Callback</title></head>
+<body style="font-family: sans-serif; padding: 40px;">
+<h2>Authorization complete</h2>
+  <p>Copy this code and send it back to Jarvis:</p>
+  <textarea id="code" rows="3" style="width:100%; font-size:16px;" readonly></textarea>
+  <script>
+  const params = new URLSearchParams(window.location.search);
+document.getElementById('code').value = params.get('code') || '(no code found in URL)';
+</script>
+  </body>
+  </html>
